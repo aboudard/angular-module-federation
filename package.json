@@ -4,8 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start:mfe1": "ng serve mfe1",
+    "start:mfe1:static": "http-server dist/mfe1 -p 4201 --cors",
+    "start:shell:static": "http-server dist/shell -p 4200 --cors",
     "start": "ng serve shell",
-    "build": "ng build",
+    "build:shell": "ng build shell",
+    "build:mfe1": "ng build mfe1",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js"
@@ -30,6 +33,7 @@
     "@angular/cli": "^14.2.10",
     "@angular/compiler-cli": "^14.1.0",
     "@types/jasmine": "~4.0.0",
+    "http-server": "^14.1.1",
     "jasmine-core": "~4.2.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
