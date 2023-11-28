@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "serve:mfe1:manifest": "http-server projects/mfe1/manifest -p 4400 --cors",
     "start:mfe1": "ng serve mfe1",
     "start:mfe1:static": "http-server dist/mfe1 -p 4201 --cors",
     "start:shell:static": "http-server dist/shell -p 4200 --cors",
