@@ -3,6 +3,8 @@ import { CustomManifest, CustomRemoteConfig } from './utils/config';
 import { Router } from '@angular/router';
 import { getManifest, loadManifest } from '@angular-architects/module-federation';
 import { buildRoutes } from './utils/routes';
+import { Store } from '@ngrx/store';
+import { getUser } from 'core';
 
 @Component({
   selector: 'app-root',
@@ -12,10 +14,12 @@ import { buildRoutes } from './utils/routes';
 export class AppComponent implements OnInit {
   title = 'shell2';
   remotes: CustomRemoteConfig[] = [];
+  user$ = this.store.select(getUser);
 
   constructor(
-    private router: Router) {
-  }
+    private router: Router,
+    private store: Store
+    ) {}
 
   async ngOnInit(): Promise<void> {
 

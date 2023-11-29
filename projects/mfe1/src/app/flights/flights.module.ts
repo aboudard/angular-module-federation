@@ -5,6 +5,7 @@ import { FlightsRoutingModule } from './flights-routing.module';
 import { FlightsComponent } from './flights.component';
 import { StoreModule } from '@ngrx/store';
 import * as fromState from './store';
+import { CoreModule } from 'core';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import * as fromState from './store';
   imports: [
     CommonModule,
     FlightsRoutingModule,
+    CoreModule, // TODO: get te core store
     StoreModule.forFeature(fromState.flightsStateFeatureKey, fromState.flightsReducer)
   ]
 })

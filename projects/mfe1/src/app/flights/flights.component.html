@@ -1,3 +1,3 @@
 <h2>flights works!</h2>
-<p>Is flights state up ? {{hasFlights$ | async}}</p>
+<p>Is flights state up ? {{hasFlights$ | async}} - current User: {{(user$ | async)?.name}}</p>
 <p><button (click)="getCore()">get core</button></p>
