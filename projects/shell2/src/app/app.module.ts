@@ -7,6 +7,10 @@ import { CustomManifest, CustomRemoteConfig } from './utils/config';
 import { Router, provideRouter } from '@angular/router';
 import { getManifest } from '@angular-architects/module-federation';
 import { buildRoutes } from './utils/routes';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
+import { reducers, metaReducers } from './store';
 
 
 @NgModule({
@@ -15,9 +19,11 @@ import { buildRoutes } from './utils/routes';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    StoreModule.forRoot(reducers, { metaReducers }),
+    !environment.production ? StoreDevtoolsModule.instrument() : []
   ],
-  providers: [],
+  providers: [], 
   bootstrap: [AppComponent]
 })
 export class AppModule {
