@@ -14,6 +14,7 @@
     "build:shell2": "ng build shell2",
     "build:mfe1": "ng build mfe1",
     "watch:core": "ng build core --watch --configuration development",
+    "build:core": "ng build core",
     "watch": "ng build shell2 --watch --configuration development",
     "test": "ng test",
     "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js"

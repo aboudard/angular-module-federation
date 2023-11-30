@@ -15,7 +15,7 @@ import { CoreModule } from 'core';
   imports: [
     CommonModule,
     FlightsRoutingModule,
-    CoreModule, // TODO: get te core store
+    CoreModule, // TODO: get the core store
     StoreModule.forFeature(fromState.flightsStateFeatureKey, fromState.flightsReducer)
   ]
 })
