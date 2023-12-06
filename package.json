@@ -16,6 +16,7 @@
     "watch:core": "ng build core --watch --configuration development",
     "build:core": "ng build core",
     "watch": "ng build shell2 --watch --configuration development",
+    "start:all": "concurrently \"npm run start:shell2\" \"npm run start:mfe1\" \"npm run serve:mfe1:manifest\"",
     "test": "ng test",
     "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js"
   },
@@ -42,6 +43,7 @@
     "@angular/compiler-cli": "^14.1.0",
     "@ngrx/schematics": "^14.3.3",
     "@types/jasmine": "~4.0.0",
+    "concurrently": "^8.2.2",
     "http-server": "^14.1.1",
     "jasmine-core": "~4.2.0",
     "karma": "~6.4.0",
