@@ -1,7 +1,7 @@
 import { Routes } from "@angular/router";
 import { CustomManifest } from "./config";
 import { loadRemoteModule } from "@angular-architects/module-federation";
-import { APP_ROUTES } from "../app-routing.module";
+import { appRoutes } from "../app.routes";
 
 export function buildRoutes(options: CustomManifest): Routes {
 
@@ -15,9 +15,9 @@ export function buildRoutes(options: CustomManifest): Routes {
                     remoteName: key,
                     exposedModule: entry.exposedModule
                 })
-                .then(m => m[entry.ngModuleName])
+                .then(m => m[entry.ngRoutes])
         }
     });
 
-    return [...APP_ROUTES, ...lazyRoutes];
+    return [...appRoutes, ...lazyRoutes];
 }

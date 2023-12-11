@@ -1,6 +1,12 @@
-<h1>{{title}}</h1>
+
 <ul>
-  <li><a [routerLink]="['/']" routerLinkActive="router-link-active">Home</a></li>
-  <li><a [routerLink]="['/flights']" routerLinkActive="router-link-active">Flights</a></li>
+  <li><span class="title">
+    {{title}}
+  </span></li>
+  <li><a [routerLink]="['/home']" routerLinkActive="active">Home</a></li>
+  <li><a [routerLink]="['/flights']" routerLinkActive="active">Flights</a></li>
+  <li><span>## {{(user$ | async)?.name}} ##</span></li>
 </ul>
-<router-outlet></router-outlet>
+<main>
+  <router-outlet></router-outlet>
+</main>

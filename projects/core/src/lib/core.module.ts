@@ -6,13 +6,12 @@ import * as fromCore from './store';
 
 
 @NgModule({
-  declarations: [
-    CoreComponent
-  ],
-  imports: [
-  StoreModule.forFeature(fromCore.userFeatureKey, fromCore.reducer)],
-  exports: [
-    CoreComponent
-  ]
+    imports: [
+        StoreModule.forFeature(fromCore.userFeatureKey, fromCore.reducer),
+        CoreComponent
+    ],
+    exports: [
+        CoreComponent
+    ]
 })
 export class CoreModule { }

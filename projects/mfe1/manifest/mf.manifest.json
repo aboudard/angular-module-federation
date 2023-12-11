@@ -1,10 +1,9 @@
 {
 	"mfe1": {
 		"remoteEntry": "http://localhost:4201/remoteEntry.js",
-
-		"exposedModule": "./Module",
+		"exposedModule": "./routes",
 		"displayName": "Flights",
 		"routePath": "flights",
-		"ngModuleName": "FlightsModule"
+		"ngRoutes": "flightsRoutes"
 	}
 }
