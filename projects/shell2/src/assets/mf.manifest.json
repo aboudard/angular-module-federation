@@ -1,5 +1,5 @@
 {
-	"mfe1": {
+	"flights": {
 		"remoteEntry": "http://localhost:4201/remoteEntry.js",
 
 		"exposedModule": "./Module",

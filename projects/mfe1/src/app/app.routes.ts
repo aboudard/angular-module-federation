@@ -7,6 +7,11 @@ export const appRoutes: Routes = [
       import('./flights/flights.routes').then((m) => m.flightsRoutes),
   },
   {
+    path: 'accounts',
+    loadChildren: () =>
+      import('./accounts/accounts.routes').then((m) => m.accountsRoutes),
+  },
+  {
     path: '',
     redirectTo: 'flights',
     pathMatch: 'full',

@@ -5,7 +5,8 @@ module.exports = withModuleFederationPlugin({
   name: 'mfe1',
 
   exposes: {
-    './routes': './projects/mfe1/src/app/flights/flights.routes.ts',
+    './flights': './projects/mfe1/src/app/flights/flights.routes.ts',
+    './accounts': './projects/mfe1/src/app/accounts/accounts.routes.ts',
   },
 
   /*shared: {

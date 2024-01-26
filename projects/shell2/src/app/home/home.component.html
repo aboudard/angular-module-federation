@@ -1,3 +1,11 @@
 <h2>home works!</h2>
 <p>This is the counter: {{counter$ | async}}</p>
 <p><button class="btn" (click)="getCore()">get core</button></p>
+<div>
+    <input type="number" [(ngModel)]="a"> / <input type="number" [(ngModel)]="b">
+</div>
+<div>
+    <span>
+        val : {{a + b}}
+    </span>
+</div>
