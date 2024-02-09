@@ -15,6 +15,7 @@
     "build:mfe1": "ng build mfe1",
     "watch:core": "ng build core --watch --configuration development",
     "build:core": "ng build core",
+    "publish:core:local": "ng build core && cd dist/core && npm publish --registry http://localhost:4873/",
     "watch": "ng build shell2 --watch --configuration development",
     "start:all": "concurrently \"npm run start:shell\" \"npm run start:mfe1\"",
     "start:all2": "concurrently \"npm run start:shell2\" \"npm run start:mfe1\" \"npm run serve:mfe1:manifest\"",

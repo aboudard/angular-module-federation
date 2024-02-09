@@ -9,3 +9,9 @@
         val : {{a + b}}
     </span>
 </div>
+<hr>
+<div>
+    <input type="text" ngModel #textField>
+    <span>{{textField.value}}</span>  
+    <button class="btn" [disabled]="textField.value == ''" (click)="setCore(textField.value)">set core</button>
+</div>

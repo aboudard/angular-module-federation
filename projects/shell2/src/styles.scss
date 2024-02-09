@@ -3,6 +3,12 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
     margin: 0;
 }
+input[type=text], input[type=number], select, textarea {
+    padding: 0.4rem 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+  }
 .btn {
     background-color: #04AA6D!important;
     border-radius: 5px;
@@ -15,5 +21,9 @@ body {
     }
     &:active {
         background-color: #49964b!important;
+    }
+    &:disabled {
+        background-color: #cccccc!important;
+        cursor: not-allowed;
     }
 }

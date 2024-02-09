@@ -15,13 +15,19 @@ import { FormsModule } from '@angular/forms';
     imports: [AsyncPipe, FormsModule]
 })
 export class HomeComponent {
+  
   counter$: Observable<number> = inject(Store).select(getCount);
   coreService = inject(CoreService);
   a = 1;
   b = 2;
+  text: string = '';
 
   getCore(): void {
     alert(this.coreService.getCore());
+  }
+
+  setCore(text: string): void {
+    this.coreService.setCore(text);
   }
 
 }
