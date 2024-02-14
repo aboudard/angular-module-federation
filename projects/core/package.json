@@ -1,10 +1,10 @@
 {
   "name": "core",
-  "version": "0.1.0",
+  "version": "15.0.0",
   "peerDependencies": {
-    "@angular/common": "^14.2.0",
-    "@angular/core": "^14.2.0",
-    "@ngrx/store": "^14.3.3"
+    "@angular/common": "^15.2.10",
+    "@angular/core": "^15.2.10",
+    "@ngrx/store": "^15.4.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
