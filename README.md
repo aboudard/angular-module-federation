@@ -1,6 +1,6 @@
 # AngularModuleFederation
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
+Current version is compatible with Angular 15.
 In a single Angular workspace, there will be a shell application (shell or shell2) and a microfrontend (mfe1).
 The applications are running NgRx Store for demonstration purpose of simple Shell/Microfrontend commnication.
 

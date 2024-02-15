@@ -1,10 +1,8 @@
 import { loadManifest } from '@angular-architects/module-federation';
 
-// static version
-/*loadManifest("/assets/mf.manifest.json")
-  .catch(err => console.error(err))
-  .then(_ => import('./bootstrap'))
-  .catch(err => console.error(err));*/
+Promise.all([
+  loadManifest("http://localhost:4400/mf.manifest.json"),
 
-import('./bootstrap')
-  .catch(err => console.error(err));
+]).catch((err) => console.error('Error loading remote entries', err))
+  .then(() => import('./bootstrap'))
+  .catch((err) => console.error(err));

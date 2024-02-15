@@ -15,22 +15,15 @@ import { NgFor, AsyncPipe } from '@angular/common';
     imports: [RouterLinkActive, RouterLink, NgFor, RouterOutlet, AsyncPipe]
 })
 export class AppComponent implements OnInit {
-  title = 'shell2';
+  title = 'Angular Microfrontend';
   remotes: CustomRemoteConfig[] = [];
   user$ = inject(Store).select(getUser);
   router = inject(Router);
 
   async ngOnInit(): Promise<void> {
-
-    // http version
-    await loadManifest("http://localhost:4400/mf.manifest.json");
-
     const manifest = getManifest<CustomManifest>();
-    console.log('manifest', manifest);
-
     const routes = buildRoutes(manifest);
     this.router.resetConfig(routes);
-
     this.remotes = Object.values(manifest);
   }
 

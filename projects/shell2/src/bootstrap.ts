@@ -8,8 +8,9 @@ import { reducers, metaReducers } from './app/store';
 import { StoreModule } from '@ngrx/store';
 import { CoreModule } from 'core';
 import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+import { RouterModule, TitleStrategy } from '@angular/router';
 import { appRoutes } from './app/app.routes';
+import { CustomPageTitleStrategy } from './app/services/custom-page-title-strategy';
 
 if (environment.production) {
   enableProdMode();
@@ -24,5 +25,9 @@ bootstrapApplication(AppComponent, {
       StoreModule.forRoot(reducers, { metaReducers }),
       !environment.production ? StoreDevtoolsModule.instrument() : []
     ),
+    {
+      provide: TitleStrategy,
+        useClass: CustomPageTitleStrategy
+    }
   ],
 }).catch((err) => console.error(err));
