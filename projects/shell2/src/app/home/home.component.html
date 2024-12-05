@@ -2,11 +2,12 @@
 <p>This is the counter: {{counter$ | async}}</p>
 <p><button class="btn" (click)="getCore()">get core</button></p>
 <div>
-    <input type="number" [(ngModel)]="a"> / <input type="number" [(ngModel)]="b">
+    <input type="number" [ngModel]="a()" (ngModelChange)="a.set($event)"> /
+    <input type="number" [ngModel]="b()" (ngModelChange)="b.set($event)">
 </div>
 <div>
     <span>
-        val : {{a + b}}
+        val : {{ res() }}
     </span>
 </div>
 <hr>

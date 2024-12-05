@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, computed, inject, signal } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { getCount } from '../store/counter.selectors';
 import { Observable } from 'rxjs';
@@ -15,11 +15,12 @@ import { FormsModule } from '@angular/forms';
     imports: [AsyncPipe, FormsModule]
 })
 export class HomeComponent {
-  
+
   counter$: Observable<number> = inject(Store).select(getCount);
   coreService = inject(CoreService);
-  a = 1;
-  b = 2;
+  a = signal(1);
+  b = signal(2);
+  res = computed(() => this.a() + this.b());
   text: string = '';
 
   getCore(): void {

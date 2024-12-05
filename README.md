@@ -1,6 +1,6 @@
 # AngularModuleFederation
 
-Current version is compatible with Angular 15.
+Current version is compatible with Angular 16.
 In a single Angular workspace, there will be a shell application (shell or shell2) and a microfrontend (mfe1).
 The applications are running NgRx Store for demonstration purpose of simple Shell/Microfrontend commnication.
 
